@@ -9,68 +9,71 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="<?= base_url('public/script.js') ?>"></script>
     <style>
-    body {
-         font-family: Arial, sans-serif;
-         text-align: center;
-         background-color: #f785f5;
-         padding: 20px;
-     }
+body {
+    font-family: "Segoe UI", sans-serif; /* Change to your desired font */
+    text-align: center;
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+    padding: 20px;
+}
 
-     h1 {
-         color: #333;
-     }
 
-     #player-container {
-         max-width: 400px;
-         margin: 0 auto;
-         padding: 20px;
-         background-color: #ff101f;
-         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-     }
 
-     audio {
-         width: 100%;
-     }
+h1 {
+    color: #007bff; /* Primary color */
+}
 
-     #playlist {
-         list-style: none;
-         padding: 0;
-     }
+#player-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #444; /* Darker background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 
-     #playlist li {
-         cursor: pointer;
-         padding: 10px;
-         background-color: #eee;
-         margin: 5px 0;
-         transition: background-color 0.2s ease-in-out;
-     }
+audio {
+    width: 100%;
+}
 
-     #playlist li:hover {
-         background-color: #ddd;
-     }
+#playlist {
+    list-style: none;
+    padding: 0;
+}
 
-     #playlist li.active {
-         background-color: #007bff;
-         color: #fff;
-     }
-    </style>
-    <style>
-    /* Your existing styles */
+#playlist li {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #555; /* Darker background color */
+    margin: 5px 0;
+    transition: background-color 0.2s ease-in-out;
+}
 
-    .add-to-playlist {
-        display: inline-block;
-        padding: 5px 10px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: background-color 0.2s ease-in-out;
-    }
+#playlist li:hover {
+    background-color: #666; /* Slightly lighter background color on hover */
+}
 
-    .add-to-playlist:hover {
-        background-color: #0056b3;
-    }
+#playlist li.active {
+    background-color: #007bff; /* Active item color */
+    color: #fff;
+}
+
+/* Your existing styles */
+
+.add-to-playlist {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #007bff; /* Primary color */
+    color: #fff; /* Light text color */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.add-to-playlist:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
 </style>
 
 </head>
