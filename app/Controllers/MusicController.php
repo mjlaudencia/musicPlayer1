@@ -23,7 +23,7 @@ class MusicController extends BaseController
         $playlistName = $this->request->getPost('playlist_name');
 
         $playlistModel = new PlaylistModel();
-        $playlistModel->insert(['Song' => $playlistName]);
+        $playlistModel->insert(['name' => $playlistName]);
 
         return redirect()->to('/');
     }
@@ -55,15 +55,15 @@ class MusicController extends BaseController
     $musicModel = new MusicModel();
 
     $file = $this->request->getFile('musicFile');
-    $customFileName = $this->request->getPost('musicName'); // Get the custom file Song
+    $customFileName = $this->request->getPost('musicName'); // Get the custom file name
 
     if ($file->isValid() && $file->getClientExtension() === 'mp3') {
         $newName = $file->getRandomName();
         $file->move(ROOTPATH . 'public/uploads', $newName);
 
-        // Save the custom file Song and file path to the database
+        // Save the custom file name and file path to the database
         $musicModel->insert([
-            'file_name' => $customFileName, // Save the custom file Song
+            'file_name' => $customFileName, // Save the custom file name
             'file_path' => 'uploads/' . $newName,
         ]);
 
