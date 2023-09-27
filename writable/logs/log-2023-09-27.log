@@ -1048,3 +1048,171 @@ FROM `musics`', [], false)
  7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
  9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\musicPlayer1\\public\\index.php')
+ERROR - 2023-09-27 14:53:45 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\laragon\www\musicPlayer1\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\musicPlayer1\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'musicplaylist1', 3306, '', 0)
+#1 C:\laragon\www\musicPlayer1\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\musicPlayer1\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\musicPlayer1\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\musicPlayer1\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\musicPlayer1\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\musicPlayer1\app\Controllers\MusicController.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\musicPlayer1\system\CodeIgniter.php(919): App\Controllers\MusicController->index()
+#8 C:\laragon\www\musicPlayer1\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+#9 C:\laragon\www\musicPlayer1\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\musicPlayer1\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\musicPlayer1\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\laragon\www\musicPlayer1\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\musicPlayer1\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\musicPlayer1\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\musicPlayer1\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\musicPlayer1\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\musicPlayer1\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\musicPlayer1\app\Controllers\MusicController.php(13): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\musicPlayer1\system\CodeIgniter.php(919): App\Controllers\MusicController->index()
+#7 C:\laragon\www\musicPlayer1\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+#8 C:\laragon\www\musicPlayer1\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\musicPlayer1\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\musicPlayer1\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-27 14:53:45 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `music_tracks`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MusicController.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MusicController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\musicPlayer1\\public\\index.php')
+ERROR - 2023-09-27 14:53:46 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\laragon\www\musicPlayer1\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\musicPlayer1\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'musicplaylist1', 3306, '', 0)
+#1 C:\laragon\www\musicPlayer1\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\musicPlayer1\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\musicPlayer1\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\musicPlayer1\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\musicPlayer1\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\musicPlayer1\app\Controllers\MusicController.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\musicPlayer1\system\CodeIgniter.php(919): App\Controllers\MusicController->index()
+#8 C:\laragon\www\musicPlayer1\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+#9 C:\laragon\www\musicPlayer1\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\musicPlayer1\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\musicPlayer1\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\laragon\www\musicPlayer1\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\musicPlayer1\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\musicPlayer1\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\musicPlayer1\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\musicPlayer1\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\musicPlayer1\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\musicPlayer1\app\Controllers\MusicController.php(13): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\musicPlayer1\system\CodeIgniter.php(919): App\Controllers\MusicController->index()
+#7 C:\laragon\www\musicPlayer1\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+#8 C:\laragon\www\musicPlayer1\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\musicPlayer1\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\musicPlayer1\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-27 14:53:46 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `music_tracks`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MusicController.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MusicController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\musicPlayer1\\public\\index.php')
+CRITICAL - 2023-09-27 15:17:21 --> Invalid file: "music_player.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('music_player.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('music_player', [], true)
+ 3 APPPATH\Controllers\MusicController.php(17): view('music_player', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MusicController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\musicPlayer1\\public\\index.php')
+CRITICAL - 2023-09-27 15:18:13 --> Invalid file: "music_player.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('music_player.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('music_player', [], true)
+ 3 APPPATH\Controllers\MusicController.php(17): view('music_player', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MusicController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\musicPlayer1\\public\\index.php')
+CRITICAL - 2023-09-27 15:19:03 --> Invalid file: "music_player.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('music_player.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('music_player', [], true)
+ 3 APPPATH\Controllers\MusicController.php(17): view('music_player', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MusicController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\musicPlayer1\\public\\index.php')
+CRITICAL - 2023-09-27 15:19:04 --> Invalid file: "music_player.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('music_player.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('music_player', [], true)
+ 3 APPPATH\Controllers\MusicController.php(17): view('music_player', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MusicController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\musicPlayer1\\public\\index.php')
+CRITICAL - 2023-09-27 15:19:04 --> Invalid file: "music_player.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('music_player.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('music_player', [], true)
+ 3 APPPATH\Controllers\MusicController.php(17): view('music_player', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MusicController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\musicPlayer1\\public\\index.php')
+CRITICAL - 2023-09-27 15:19:04 --> Invalid file: "music_player.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('music_player.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('music_player', [], true)
+ 3 APPPATH\Controllers\MusicController.php(17): view('music_player', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MusicController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\musicPlayer1\\public\\index.php')
+CRITICAL - 2023-09-27 15:20:58 --> Invalid file: "music_player.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('music_player.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('music_player', [], true)
+ 3 APPPATH\Controllers\MusicController.php(17): view('music_player', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MusicController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\musicPlayer1\\public\\index.php')
+CRITICAL - 2023-09-27 15:20:59 --> Invalid file: "music_player.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('music_player.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('music_player', [], true)
+ 3 APPPATH\Controllers\MusicController.php(17): view('music_player', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MusicController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\musicPlayer1\\public\\index.php')
